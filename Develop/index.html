@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <h1>
+        Password Gen
+    </h1>
+    <br>
+    <div class="checkboxes">
+        <input type="checkbox" id="lowerCase" name="lowerCase" value="IncludeLowerCase">
+        <label for="option1">Lower Case</label>
+        <br>
+
+        <input type="checkbox" id="upperCase" name="upperCase" value="IncludeUpperCase">
+        <label for="option2">Upper Case</label>
+        <br>
+
+        <input type="checkbox" id="specialChar" name="specialChar" value="IncludeSpecialChar">
+        <label for="option3">Special Characters</label>
+        <br>
+
+        <input type="checkbox" id="num" name="num" value="IncludeNum">
+        <label for="option4">Numbers</label>
     </div>
-    <script src="script.js"></script>
-  </body>
+    <br>
+
+    <div class="slidecontainer">
+        <input type="range" min="8" max="128" value="60" class="slider" id="myRange">
+        <p>
+            Value: <span id="demo"></span>
+        </p>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <div class="card-body">
+                <textarea 
+                readonly id="password" 
+                placeholder="Your Secure Password"
+                aria-label="Generated Password"
+                ></textarea>
+            </div>
+
+            <div class="generate">
+                <button id="generate" class="btn">Generate Password</button>
+            </div>
+            <script src="./script.js"></script>
+</body>
+
 </html>
