@@ -10,11 +10,13 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  padding-left: 1%;
 }
 
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  font-size: large;
 }
 
 .wrapper {
@@ -28,6 +30,26 @@ header {
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
+}
+/* Removes the default appearance of the slider and sets the new width and height*/
+.slider {
+  -webkit-appearance: none;
+  width: 15%;
+  height: 25px; 
+  background: #c5bcbc;
+  outline: none; 
+  opacity: 0.7; 
+  transition: opacity .2s;
+}
+
+/* Creates a new thumbnail for the slider to match the new button colors */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px; 
+  height: 25px; 
+  background: hsl(206, 61%, 51%); 
+  cursor: pointer; 
 }
 
 .card {
@@ -74,7 +96,8 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: hsl(206, 61%, 51%); 
+  ;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;

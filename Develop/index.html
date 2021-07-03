@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- initializes CSS and HTML -->
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock, Paper, Scissors</title>
+    <title>Password Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -12,13 +15,14 @@
         Password Gen
     </h1>
     <br>
-    <div class="checkboxes">
-        <input type="checkbox" id="lowerCase" name="lowerCase" value="IncludeLowerCase">
-        <label for="option1">Lower Case</label>
-        <br>
-
+    <!-- Creates checkboxes for each of the operators our password must be able to include -->
+    <section class="checkboxes">
         <input type="checkbox" id="upperCase" name="upperCase" value="IncludeUpperCase">
         <label for="option2">Upper Case</label>
+        <br>
+
+        <input type="checkbox" id="lowerCase" name="lowerCase" value="IncludeLowerCase">
+        <label for="option1">Lower Case</label>
         <br>
 
         <input type="checkbox" id="specialChar" name="specialChar" value="IncludeSpecialChar">
@@ -27,30 +31,37 @@
 
         <input type="checkbox" id="num" name="num" value="IncludeNum">
         <label for="option4">Numbers</label>
-    </div>
+    </section>
     <br>
-
-    <div class="slidecontainer">
-        <input type="range" min="8" max="128" value="60" class="slider" id="myRange">
+<!-- Creates a slider for the length of the password -->
+<!-- The maximum and minimum values have been set so the user cannot set anything out of range -->
+    <section class="slidecontainer">
+        <input type="range" min="8" max="128" value="68" class="slider" id="myRange">
         <p>
             Value: <span id="demo"></span>
         </p>
-    </div>
+    </section>
 
-    <div class="wrapper">
-        <div class="card">
+ <!-- Creates a wrapper to put the text area and buttons in -->
+    <main class="wrapper">
+        <section class="card">
             <div class="card-body">
-                <textarea 
-                readonly id="password" 
-                placeholder="Your Secure Password"
-                aria-label="Generated Password"
-                ></textarea>
+                <textarea readonly id="password" placeholder="Your Secure Password"
+                    aria-label="Generated Password"></textarea>
             </div>
-
             <div class="generate">
                 <button id="generate" class="btn">Generate Password</button>
             </div>
-            <script src="./script.js"></script>
+
+            <div class="clipboard">
+                <!-- Attaches a function to a click of the clipboard button -->
+                <button class="btn" onclick="clipFunc()">Copy Text</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Initializes JS -->
+    <script src="./script.js"></script>
 </body>
 
 </html>
