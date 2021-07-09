@@ -4,8 +4,8 @@ let generateBtn = document.querySelector("#generate");
 let passLength = 0;
 
 //Creating variables for the 4 operators the password can generate by
-const upperCase = document.getElementById("lowerCase");
-const lowerCase = document.getElementById("upperCase");
+const upperCase = document.getElementById("upperCase");
+const lowerCase = document.getElementById("lowerCase");
 const number = document.getElementById("num");
 const specialChar = document.getElementById("specialChar");
 const resultsArea = document.getElementById("password");
